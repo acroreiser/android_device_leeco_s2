@@ -447,8 +447,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic \
-    com.android.future.usb.accessory
+    android.hardware.usb@1.0-service.cyanogen_8916
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
