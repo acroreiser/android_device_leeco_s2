@@ -459,8 +459,12 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-12-01 \
-    ro.kernel.ebpf.supported=false
+    ro.lineage.build.vendor_security_patch=2016-12-01
+
+# A12 Hacks
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false \
+    vendor.rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 
 # Vibrator
 PRODUCT_PACKAGES += \
