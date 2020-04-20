@@ -278,6 +278,10 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# Charger
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.charger.enable_suspend=true
+
 # Charger images
 PRODUCT_PACKAGES += charger_res_images
 
