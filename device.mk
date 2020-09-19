@@ -399,7 +399,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0.vendor \
     librmnetctl \
     libxml2 \
-    rild_socket
+    rild_socket \
+    libaudioclient_shim
 
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
