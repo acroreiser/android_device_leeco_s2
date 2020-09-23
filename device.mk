@@ -461,7 +461,8 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-12-01
+    ro.lineage.build.vendor_security_patch=2016-12-01 \
+    ro.kernel.ebpf.supported=false
 
 # Vibrator
 PRODUCT_PACKAGES += \
