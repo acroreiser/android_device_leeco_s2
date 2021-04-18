@@ -307,6 +307,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# DocumentsUI overlay
+PRODUCT_PACKAGES += \
+    DocumentsUIOverlay
+
 # Perf configuration files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
