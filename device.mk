@@ -311,6 +311,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay
 
+# Trebuchet overlay
+PRODUCT_PACKAGES += \
+    TrebuchetGoOverlay
+
 # Perf configuration files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
