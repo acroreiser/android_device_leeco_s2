@@ -307,6 +307,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Overlay for Gboard
+PRODUCT_PACKAGES += \
+    GboardOverlay
+
 # DocumentsUI overlay
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay
