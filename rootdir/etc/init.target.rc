@@ -29,8 +29,8 @@
 import /vendor/etc/init/hw/init.s2.usb.rc
 
 on fs
-    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /system/vendor/etc/fstab.qcom --early
 
     mkdir /persist/data 0700 system system
@@ -84,12 +84,12 @@ on post-fs-data
     # audio
     chown system system /system/bin/ext_spk_loopback
     chmod 0755 /system/bin/ext_spk_loopback
-    chmod 0644 /sys/devices/soc.0/c051000.sound/usb_audio
-    chmod 0644 /sys/devices/soc.0/c051000.sound/usb_audio_pid
+    chmod 0644 /sys/devices/soc/c051000.sound/usb_audio
+    chmod 0644 /sys/devices/soc/c051000.sound/usb_audio_pid
     chmod 0644 /sys/module/snd_soc_msm8x16/parameters/headset_swap
     chmod 0644 /sys/module/snd_soc_msm8x16/parameters/usb_audio_mode
-    chown media media /sys/devices/soc.0/c051000.sound/usb_audio
-    chown media media /sys/devices/soc.0/c051000.sound/usb_audio_pid
+    chown media media /sys/devices/soc/c051000.sound/usb_audio
+    chown media media /sys/devices/soc/c051000.sound/usb_audio_pid
     chown media media /sys/module/snd_soc_msm8x16/parameters/headset_swap
     chown media media /sys/module/snd_soc_msm8x16/parameters/usb_audio_mode
 

@@ -144,8 +144,8 @@ firmware_directories /vendor/firmware_mnt/image/
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
-/sys/devices/soc.0/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
-/sys/devices/soc.0/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
+/sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
 /dev/spidev0.0            0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
@@ -214,18 +214,18 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
 /sys/devices/f9925000.i2c/i2c-0/0-*                 enable         0660    input    system
 /sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay     0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            enable         0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            poll_delay     0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            enable_wakeup  0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            max_latency    0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            flush          0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            calibrate      0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            enable         0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            poll_delay     0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            enable_wakeup  0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            max_latency    0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            flush          0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            calibrate      0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            enable         0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            poll_delay     0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            enable_wakeup  0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            max_latency    0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            flush          0660    input    system
+/sys/devices/soc/78b6000.i2c/i2c-0/0-*            calibrate      0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            enable         0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            poll_delay     0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            enable_wakeup  0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            max_latency    0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            flush          0660    input    system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-*            calibrate      0660    input    system
 /sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
 /sys/devices/virtual/optical_sensors/proximity      ps_poll_delay  0660    input    system
 /sys/devices/virtual/optical_sensors/lightsensor    ls_auto        0660    input    system
@@ -234,14 +234,14 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
 
 # ctp
-/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/sensors/ft5x06-proximity   enable  0660    input   system
+/sys/devices/soc/78b9000.i2c/i2c-5/5-0038/sensors/ft5x06-proximity   enable  0660    input   system
 /sys/devices/virtual/gesture/gesture*          enable  0660    input   system
 /sys/devices/virtual/gesture/gesture*          pocket  0660    input   system
 
 # led
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/red           blink   0660    input   system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/green         blink   0660    input   system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-0045/leds/blue          blink   0660    input   system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-0045/leds/red           blink   0660    input   system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-0045/leds/green         blink   0660    input   system
+/sys/devices/soc/78b5000.i2c/i2c-1/1-0045/leds/blue          blink   0660    input   system
 
 # vm_bms
 /dev/vm_bms               0660   system     system
@@ -306,8 +306,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/block/platform/soc/c0c4000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/1d84000.ufshc/by-name/frp       0600   system     system
 
-# Add device block for FRP with soc.0
-/dev/block/platform/soc.0/7824900.sdhci/by-name/config    0600   system     system
+# Add device block for FRP with soc
+/dev/block/platform/soc/7824900.sdhci/by-name/config    0600   system     system
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system

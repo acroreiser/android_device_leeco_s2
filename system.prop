@@ -75,7 +75,7 @@ persist.sys.le_fast_chrg_enable=1
 persist.qfp=false
 
 # FRP
-ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
+ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/config
 
 # Graphics
 debug.sf.hw=1

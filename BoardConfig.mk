@@ -46,6 +46,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci earlyprintk
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
@@ -149,7 +150,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_s2
 TARGET_RECOVERY_DEVICE_MODULES := libinit_s2
 
