@@ -77,6 +77,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     vendor.qti.hardware.bluetooth_audio@2.0 \
@@ -131,6 +132,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
@@ -140,11 +142,12 @@ PRODUCT_PACKAGES += \
     copybit.msm8952 \
     gralloc.msm8952 \
     hwcomposer.msm8952 \
-    memtrack.msm8952 \
     libdisplayconfig \
     liboverlay \
     libqdMetaData.system \
-    libtinyxml
+    libtinyxml \
+    libtinyxml.vendor \
+    memtrack.msm8952
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ad_calib.cfg:$(TARGET_COPY_OUT_SYSTEM)/etc/ad_calib.cfg
@@ -161,6 +164,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1.vendor \
     android.hardware.drm@1.4-service.clearkey
 
 # Fake logprint for fingerprint libs
@@ -186,6 +190,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0-impl-qti:64 \
     android.hardware.gnss@2.0-service-qti \
     libbatching \
@@ -210,7 +215,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
     android.hidl.base@1.0 \
+    android.hidl.memory@1.0.vendor \
     android.hidl.manager@1.0 \
     libhidltransport \
     libhwbinder
@@ -270,6 +277,7 @@ PRODUCT_COPY_FILES += \
 
 # Netutils
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
     android.system.net.netd@1.0 \
     libandroid_net \
     netutils-wrapper-1.0
@@ -345,6 +353,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock \
     vendor.qti.hardware.perf@2.0
@@ -356,7 +365,8 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libjson.vendor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -384,6 +394,10 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.0.vendor \
     librmnetctl \
     libxml2
 
