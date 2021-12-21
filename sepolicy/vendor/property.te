@@ -1,4 +1,2 @@
 # Alarm
 type vendor_alarm_prop, property_type;
-
-type vendor_dataadpl_prop, property_type;
