@@ -71,6 +71,11 @@ $(WLAN_MAC): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_DICT_DAT) $(WLAN_MAC)
 
+# Create symbolic links for msadp
+$(shell  mkdir -p $(TARGET_OUT_VENDOR)/firmware; \
+	ln -sf /dev/block/bootdevice/by-name/msadp \
+	$(TARGET_OUT_VENDOR)/firmware/msadp)
+
 # RFS symlinks
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
