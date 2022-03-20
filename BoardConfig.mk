@@ -56,6 +56,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/leeco/msm8976
 TARGET_KERNEL_CONFIG := lineage_s2_defconfig
+TARGET_KERNEL_CLANG_COMPILE := false
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
