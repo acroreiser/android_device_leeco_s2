@@ -120,9 +120,6 @@ TARGET_USES_GRALLOC1 := true
 # UI
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
 
-# Encryption
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Exclude serif fonts for saving system.img size.
 EXCLUDE_SERIF_FONTS := true
 

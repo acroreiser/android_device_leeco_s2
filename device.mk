@@ -114,10 +114,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.leeco_s2 \
     ConsumerirTransmitter
 
-# CryptfsHW
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
 # Dalvik heap memory limits
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
