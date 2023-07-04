@@ -38,7 +38,7 @@
 
 # Fingerprint
 /(vendor|system/vendor|system)/bin/gx_fpd                                                   u:object_r:goodix_exec:s0
-/system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.leeco_s2     u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.leeco_s2     u:object_r:hal_fingerprint_default_exec:s0
 
 /dev/goodix_fp                                                                              u:object_r:goodix_device:s0
 
