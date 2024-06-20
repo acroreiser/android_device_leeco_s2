@@ -225,6 +225,9 @@ TARGET_USES_WCNSS_MAC_ADDR_REV		:= true
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := s2,le_s2,le_s2_ww
 
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 #Enable DRM plugins 64 bit compilation
 TARGET_ENABLE_MEDIADRM_64 := true
 
