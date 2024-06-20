@@ -150,10 +150,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    Doze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
