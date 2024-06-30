@@ -179,11 +179,12 @@ BatteryListenerImpl::~BatteryListenerImpl()
         std::lock_guard<std::mutex> _l(mLock);
         if (mHealth != NULL)
             mHealth->unlinkToDeath(this);
-            auto r = mHealth->unlinkToDeath(this);
-            if (!r.isOk() || r == false) {
-                ALOGE("Transaction error in unregister to HealthHAL death: %s",
-                        r.description().c_str());
-            }
+
+        auto r = mHealth->unlinkToDeath(this);
+        if (!r.isOk() || r == false) {
+            ALOGE("Transaction error in unregister to HealthHAL death: %s",
+                    r.description().c_str());
+        }
     }
     mDone = true;
     mThread->join();
