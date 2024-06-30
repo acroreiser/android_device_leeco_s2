@@ -37,6 +37,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.Z
   Skylar Chang
 
 */
+
+#include <stdint.h>
+typedef uint32_t in_addr_t;
+
 #include <IPACM_OffloadManager.h>
 #include <sys/ioctl.h>
 #include <net/if.h>

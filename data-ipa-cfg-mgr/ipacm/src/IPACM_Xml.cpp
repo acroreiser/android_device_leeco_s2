@@ -36,7 +36,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   @Author
    Skylar Chang/Shihuan Liu
 */
-
+#include <stdint.h>
+typedef uint32_t in_addr_t;
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
