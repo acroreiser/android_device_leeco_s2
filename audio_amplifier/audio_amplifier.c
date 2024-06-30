@@ -266,7 +266,7 @@ static int amp_module_open(const hw_module_t *module,
     tfa9890_dev->amp_dev.common.version = HARDWARE_DEVICE_API_VERSION(1, 0);
     tfa9890_dev->amp_dev.common.close = amp_dev_close;
 
-    tfa9890_dev->amp_dev.enable_output_devices = amp_enable_output_devices;
+    tfa9890_dev->amp_dev.enable_output_devices = (struct amplifier_device *) amp_enable_output_devices;
     tfa9890_dev->amp_dev.set_mode = amp_set_mode;
 
     if (amp_init(tfa9890_dev)) {
