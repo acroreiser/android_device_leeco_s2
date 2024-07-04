@@ -74,9 +74,6 @@ persist.sys.le_fast_chrg_enable=1
 # Fingerprint
 persist.qfp=false
 
-# FRP
-ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
-
 # Graphics
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
