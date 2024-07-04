@@ -172,3 +172,6 @@ ro.cutoff_voltage_mv=3200
 
 # Increase watchdog timeout multiplier to workaround ANRs
 ro.hw_timeout_multiplier=6
+
+# Zygote
+zygote.critical_window.minute=10
