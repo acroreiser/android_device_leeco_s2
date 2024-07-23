@@ -361,6 +361,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0-service
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
