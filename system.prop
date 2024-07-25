@@ -36,7 +36,7 @@ ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 camera.lowpower.record.enable=1
-persist.camera.HAL3.enabled=1
+persist.camera.HAL3.enabled=0
 persist.camera.hal_migrating=0
 persist.camera.s2.restart=0
 vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip,com.whatsapp
