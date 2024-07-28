@@ -30,6 +30,7 @@ vendor.voice.path.for.pcm.voip=true
 # Bluetooth
 bluetooth.hfp.client=1
 qcom.bluetooth.soc=pronto
+vendor.bluetooth.soc=pronto
 vendor.qcom.bluetooth.soc=pronto
 ro.btconfig.if=pronto
 ro.btconfig.vendor=qcom
