@@ -8,10 +8,10 @@ service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-servi
     writepid /dev/cpuset/system-background/tasks
 
 service gx_fpd /vendor/bin/gx_fpd
-    class late_start
-    user system
-    group system
-    seclabel u:r:goodix:s0
+    class hal
+    user root
+    group root
+#    seclabel u:r:goodix:s0
 
 on boot
     chown system system /dev/goodix_fp
