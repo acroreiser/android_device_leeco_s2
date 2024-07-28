@@ -419,6 +419,11 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=MSM8976
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
