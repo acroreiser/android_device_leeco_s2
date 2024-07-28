@@ -29,10 +29,11 @@ vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
 bluetooth.hfp.client=1
-qcom.bluetooth.soc=smd
-ro.btconfig.if=smd
+qcom.bluetooth.soc=pronto
+vendor.qcom.bluetooth.soc=pronto
+ro.btconfig.if=pronto
 ro.btconfig.vendor=qcom
-ro.qualcomm.bt.hci_transport=smd
+ro.qualcomm.bt.hci_transport=pronto
 
 # Camera
 camera.lowpower.record.enable=1
