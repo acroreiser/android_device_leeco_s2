@@ -24,6 +24,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit customized Android Go defaults.
 $(call inherit-product, device/leeco/s2/go_defaults_custom.mk)
 
+# Audio package for Go
+$(call inherit-product, frameworks/base/data/sounds/AudioPackageGo.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/leeco/s2/s2-vendor.mk)
 
