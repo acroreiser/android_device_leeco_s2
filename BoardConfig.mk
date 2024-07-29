@@ -206,7 +206,6 @@ TARGET_LD_SHIM_LIBS := \
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so \
     /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
-    /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so \
     /system/vendor/lib64/libmm-abl.so|libshims_thermal.so \
     /system/vendor/lib64/libmm-qdcm-diag.so|libshims_thermal.so
