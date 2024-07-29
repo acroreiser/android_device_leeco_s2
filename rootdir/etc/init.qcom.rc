@@ -204,6 +204,10 @@ on post-fs
     # Wait qseecomd started
     wait_for_prop sys.listeners.registered true
 
+on late-fs
+    # GnssConfiguration doesn't actually look at vendor gps.conf
+    mount none /vendor/etc/gps.conf /system/etc/gps_debug.conf bind
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
