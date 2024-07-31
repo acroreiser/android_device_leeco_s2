@@ -1,2 +1,5 @@
 allow audioserver sysfs:dir { r_dir_perms };
 allow audioserver hal_perf_default:binder call;
+get_prop(audioserver, vendor_default_prop);
+
+allow audioserver vendor_file:file { r_file_perms };

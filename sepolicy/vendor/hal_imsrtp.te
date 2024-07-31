@@ -1,1 +1,2 @@
 allow hal_imsrtp self:capability net_raw;
+allow hal_imsrtp diag_device:chr_file { open read write getattr ioctl };

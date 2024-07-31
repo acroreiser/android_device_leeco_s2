@@ -1,3 +1,4 @@
 allow hal_camera_default camera_data_file:sock_file { write };
 allow hal_camera_default sysfs:file write;
 allow hal_camera_default sysfs_leds:dir search;
+get_prop(hal_camera_default, persist_debug_prop);

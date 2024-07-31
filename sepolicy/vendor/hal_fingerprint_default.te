@@ -11,3 +11,5 @@ allow hal_fingerprint_default fingerprintd_data_file:dir { rw_dir_perms };
 allow hal_fingerprint_default fingerprintd_data_file:file { create_file_perms };
 
 add_service(hal_fingerprint_default, fingerprintd_custom_service);
+
+allow hal_fingerprint_default goodix_exec:file r_file_perms;

@@ -1,3 +1,4 @@
 allow hal_gnss_qti hal_health_hwservice:hwservice_manager find;
 
 binder_call(hal_gnss_qti, hal_health_default)
+get_prop(hal_gnss_qti, boot_status_prop);
