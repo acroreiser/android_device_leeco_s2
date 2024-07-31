@@ -199,9 +199,9 @@ SELINUX_IGNORE_NEVERALLOWS := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
    /vendor/bin/mm-qcamera-daemon|libshims_camera.so \
-   /system/lib64/hw/gxfingerprint.default.so|fakelogprint.so \
-   /system/lib64/hw/fingerprint.default.so|fakelogprint.so \
-   /system/bin/gx_fpd|fakelogprint.so
+   /vendor/lib64/hw/gxfingerprint.default.so|fakelogprint.so \
+   /vendor/lib64/hw/fingerprint.default.so|fakelogprint.so \
+   /vendor/bin/gx_fpd|fakelogprint.so
 
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so \
