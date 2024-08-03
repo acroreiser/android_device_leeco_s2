@@ -512,6 +512,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
+# Boot scripts
+PRODUCT_PACKAGES += \
+    camera_restart.sh
+
+
 ## This is a workaround for the Bluetooth sanitize shadow call stack (SCS)
 ## crash reported here: https://issuetracker.google.com/issues/302408537.
 ## For details of the root cause and the cts vts tests comparison between

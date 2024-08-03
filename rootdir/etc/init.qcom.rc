@@ -379,6 +379,8 @@ on property:sys.boot_completed=1
 
     restart vendor.per_mgr
 
+    exec u:r:su:s0 root root -- /system/bin/sh /system/vendor/bin/camera_restart.sh
+
 on property:vold.decrypt=trigger_restart_framework
     start wcnss-service
     restart vendor.camera-provider-2-4
