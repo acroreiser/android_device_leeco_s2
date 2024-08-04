@@ -197,3 +197,7 @@ ro.hw_timeout_multiplier=6
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Media
+debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
