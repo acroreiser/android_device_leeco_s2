@@ -103,10 +103,6 @@ PRODUCT_PACKAGES += \
     libshim_atomic
 endif
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
