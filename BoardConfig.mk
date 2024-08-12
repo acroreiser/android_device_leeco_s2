@@ -96,6 +96,7 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # This is needed for us as it disables tcache, which is breaking camera.
 MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
 BOARD_GLOBAL_CFLAGS += -DDECAY_TIME_DEFAULT=0
 
 # Charger
