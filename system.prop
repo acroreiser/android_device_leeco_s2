@@ -210,3 +210,6 @@ ro.lmk.psi_partial_stall_ms=70
 ro.lmk.psi_complete_stall_ms=400
 ro.lmk.thrashing_limit=0
 ro.lmk.swap_free_low_percentage=20
+ro.lmk.filecache_min_kb=153600
+ro.lmk.stall_limit_critical=40
+ro.lmk.kill_timeout_ms=50
