@@ -491,4 +491,10 @@
     <!-- The maximum number of visible recent tasks to be presented to the user through the
          SystemUI. Can be -1 if there is no maximum limit. -->
     <integer name="config_maxNumVisibleRecentTasks_lowRam">8</integer>
+
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 </resources>
