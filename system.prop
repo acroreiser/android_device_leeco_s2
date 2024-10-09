@@ -68,10 +68,10 @@ ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
 # CNE
-persist.vendor.cne.feature=1
+persist.vendor.cne.feature=0
 
 # Data modules
-persist.data.iwlan.enable=1
+persist.data.iwlan.enable=0
 persist.data.mode=concurrent
 persist.data.netmgrd.qos.enable=1
 ro.vendor.use_data_netmgrd=1
@@ -85,7 +85,7 @@ ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
 ro.qcom.ad.sensortype=2
 
 # DPM
-persist.vendor.dpm.feature=1
+persist.vendor.dpm.feature=0
 
 # DRM
 drm.service.enabled=true
