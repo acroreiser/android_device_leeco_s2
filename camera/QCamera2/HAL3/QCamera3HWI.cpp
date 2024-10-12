@@ -33,7 +33,7 @@
 #define __STDC_LIMIT_MACROS
 #include <cutils/properties.h>
 #include <hardware/camera3.h>
-#include <camera/CameraMetadata.h>
+#include <CameraMetadata.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -55,6 +55,7 @@
 #include <utils/RefBase.h>
 #include <QServiceUtils.h>
 
+using ::android::hardware::camera::common::helper::CameraMetadata;
 using namespace android;
 
 namespace qcamera {
