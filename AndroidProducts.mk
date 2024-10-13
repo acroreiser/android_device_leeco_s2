@@ -14,9 +14,11 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_s2.mk
+    $(LOCAL_DIR)/lineage_s2.mk \
+    $(LOCAL_DIR)/lineage_s2_gms_go_2gb.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_s2-user \
     lineage_s2-userdebug \
-    lineage_s2-eng
+    lineage_s2-eng \
+    lineage_s2_gms_go_2gb-user
