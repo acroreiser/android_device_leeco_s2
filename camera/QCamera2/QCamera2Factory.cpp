@@ -539,6 +539,9 @@ int QCamera2Factory::setTorchMode(__attribute__((unused)) const char* camera_id,
     }
 
     if (on) {
+        if (mCallbacks)
+            mCallbacks->torch_mode_status_change(mCallbacks, camera_id, TORCH_MODE_STATUS_AVAILABLE_ON);
+
         ALOGD("%s: on\n", __FUNCTION__);
         int bytes = snprintf(buffer, sizeof(buffer), "255");
         retVal = write(fd_brightness, buffer, (size_t)bytes);
@@ -553,6 +556,9 @@ int QCamera2Factory::setTorchMode(__attribute__((unused)) const char* camera_id,
             return -EBADFD;
         }
     } else {
+        if (mCallbacks)
+            mCallbacks->torch_mode_status_change(mCallbacks, camera_id, TORCH_MODE_STATUS_AVAILABLE_OFF);
+
         ALOGD("%s: off\n", __FUNCTION__);
         int bytes = snprintf(buffer, sizeof(buffer), "0");
         retVal = write(fd_brightness, buffer, (size_t)bytes);
