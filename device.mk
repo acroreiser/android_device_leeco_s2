@@ -446,10 +446,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
     ro.soc.model=MSM8976
 
-# SystemUI module for Android Go
-PRODUCT_PACKAGES += \
-    SystemUIGo
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
