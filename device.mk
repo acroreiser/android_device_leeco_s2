@@ -21,8 +21,8 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit customized Android Go defaults.
-$(call inherit-product, device/leeco/s2/go_defaults_custom.mk)
+# Inherit 512M Android Go defaults.
+$(call inherit-product, build/make/target/product/go_defaults_512.mk)
 
 # Audio package for Go
 $(call inherit-product, frameworks/base/data/sounds/AudioPackageGo.mk)
