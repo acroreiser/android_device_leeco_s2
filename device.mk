@@ -530,7 +530,7 @@ PRODUCT_COPY_FILES += \
 
 # Boot scripts
 PRODUCT_PACKAGES += \
-    camera_restart.sh
+    init.post_boot.sh
 
 
 ## This is a workaround for the Bluetooth sanitize shadow call stack (SCS)
