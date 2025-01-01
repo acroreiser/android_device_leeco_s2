@@ -234,6 +234,9 @@ TARGET_OTA_ASSERT_DEVICE := s2,le_s2,le_s2_ww
 # Only needed for signing
 BOARD_AVB_ENABLE := false
 
+# Use deprecated non_ab OTA
+AB_OTA_UPDATER := false
+
 #Enable DRM plugins 64 bit compilation
 TARGET_ENABLE_MEDIADRM_64 := true
 
