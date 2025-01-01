@@ -272,7 +272,7 @@ PRODUCT_COPY_FILES += \
 
 # Music player
 PRODUCT_PACKAGES += \
-    Eleven \
+    Twelve \
     AudioFX \
     Recorder
 
