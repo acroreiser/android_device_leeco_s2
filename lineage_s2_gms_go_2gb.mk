@@ -44,3 +44,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # DocumentsUI overlay for Go
 PRODUCT_PACKAGES += \
     DocumentsUIOverlayGo
+
+# Enable Private Space feature
+PRODUCT_PACKAGES += \
+    PrivateSpaceOverlay
