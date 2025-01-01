@@ -37,11 +37,9 @@ PRODUCT_NAME := lineage_s2_gms_go_2gb
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=le_s2_ww \
-    PRODUCT_NAME=Le2_WW \
-    PRIVATE_BUILD_DESC="s2-user 6.0.1 IIXOSOP5801910121S 44 release-keys"
-
-BUILD_FINGERPRINT := Letv/Le2_WW/le_s2_ww:6.0.1/IIXOSOP5801910121S/44:user/release-keys
+    BuildDesc="s2-user 6.0.1 IIXOSOP5801910121S 44 release-keys" \
+    BuildFingerprint=Letv/Le2_WW/le_s2_ww:6.0.1/IIXOSOP5801910121S/44:user/release-keys \
+    DeviceName=s2
 
 # DocumentsUI overlay for Go
 PRODUCT_PACKAGES += \
