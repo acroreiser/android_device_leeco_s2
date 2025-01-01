@@ -11,4 +11,8 @@ echo 20480 > /dev/cpuctl/system/cpu.shares
 echo 20480 > /dev/cpuctl/nnapi-hal/cpu.shares
 echo 20480 > /dev/cpuctl/rt/cpu.shares
 
+# Limit cputime for background tasks
+echo 1000000 > /dev/cpuctl/background/cpu.cfs_period_us
+echo 2000000 > /dev/cpuctl/background/cpu.cfs_quota_us
+
 pkill provider
