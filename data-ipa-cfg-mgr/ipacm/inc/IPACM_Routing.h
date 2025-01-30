@@ -45,6 +45,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdint.h>
 #include <linux/msm_ipa.h>
 #include <IPACM_Defs.h>
+#include <iostream>
 
 using namespace std;
 

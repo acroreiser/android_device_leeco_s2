@@ -44,7 +44,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "IPACM_Defs.h"
 
 
-extern pthread_mutex_t mutex;
+extern pthread_mutex_t evt_mutex;
 extern pthread_cond_t  cond_var;
 
 cmd_evts *IPACM_EvtDispatcher::head = NULL;
@@ -84,7 +84,7 @@ int IPACM_EvtDispatcher::PostEvt
 	item->evt.callback_ptr = IPACM_EvtDispatcher::ProcessEvt;
 	memcpy(&item->evt.data, data, sizeof(ipacm_cmd_q_data));
 
-	if(pthread_mutex_lock(&mutex) != 0)
+	if(pthread_mutex_lock(&evt_mutex) != 0)
 	{
 		IPACMERR("unable to lock the mutex\n");
 		return IPACM_FAILURE;
@@ -98,7 +98,7 @@ int IPACM_EvtDispatcher::PostEvt
 	{
 		IPACMDBG("unable to lock the mutex\n");
 		/* Release the mutex before you return failure */
-		if(pthread_mutex_unlock(&mutex) != 0)
+		if(pthread_mutex_unlock(&evt_mutex) != 0)
 		{
 			IPACMERR("unable to unlock the mutex\n");
 			return IPACM_FAILURE;
@@ -106,7 +106,7 @@ int IPACM_EvtDispatcher::PostEvt
 		return IPACM_FAILURE;
 	}
 
-	if(pthread_mutex_unlock(&mutex) != 0)
+	if(pthread_mutex_unlock(&evt_mutex) != 0)
 	{
 		IPACMERR("unable to unlock the mutex\n");
 		return IPACM_FAILURE;

@@ -42,7 +42,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "IPACM_Log.h"
 #include "IPACM_Iface.h"
 
-pthread_mutex_t mutex    = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t evt_mutex    = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t  cond_var = PTHREAD_COND_INITIALIZER;
 
 MessageQueue* MessageQueue::inst_internal = NULL;
@@ -143,7 +143,7 @@ void* MessageQueue::Process(void *param)
 
 	while(1)
 	{
-		if(pthread_mutex_lock(&mutex) != 0)
+		if(pthread_mutex_lock(&evt_mutex) != 0)
 		{
 			IPACMERR("unable to lock the mutex\n");
 			return NULL;
@@ -177,11 +177,11 @@ void* MessageQueue::Process(void *param)
 		{
 			IPACMDBG("Waiting for Message\n");
 
-			if(pthread_cond_wait(&cond_var, &mutex) != 0)
+			if(pthread_cond_wait(&cond_var, &evt_mutex) != 0)
 			{
 				IPACMERR("unable to lock the mutex\n");
 
-				if(pthread_mutex_unlock(&mutex) != 0)
+				if(pthread_mutex_unlock(&evt_mutex) != 0)
 				{
 					IPACMERR("unable to unlock the mutex\n");
 					return NULL;
@@ -190,7 +190,7 @@ void* MessageQueue::Process(void *param)
 				return NULL;
 			}
 
-			if(pthread_mutex_unlock(&mutex) != 0)
+			if(pthread_mutex_unlock(&evt_mutex) != 0)
 			{
 				IPACMERR("unable to unlock the mutex\n");
 				return NULL;
@@ -199,7 +199,7 @@ void* MessageQueue::Process(void *param)
 		}
 		else
 		{
-			if(pthread_mutex_unlock(&mutex) != 0)
+			if(pthread_mutex_unlock(&evt_mutex) != 0)
 			{
 				IPACMERR("unable to unlock the mutex\n");
 				return NULL;
