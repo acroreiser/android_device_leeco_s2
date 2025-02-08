@@ -214,3 +214,6 @@ ro.lmk.kill_timeout_ms=50
 
 # Max users
 fw.max_users=4
+
+# Rescue Party
+persist.sys.enable_rescue=0
