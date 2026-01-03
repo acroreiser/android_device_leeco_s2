@@ -470,7 +470,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.s2
+    vendor.lineage.touch-service.s2
 
 # USB
 PRODUCT_PACKAGES += \
