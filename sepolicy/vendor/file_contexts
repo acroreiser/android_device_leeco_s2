@@ -40,7 +40,7 @@
 /dev/goodix_fp                                                                              u:object_r:goodix_device:s0
 
 # GNSS
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-qti                     u:object_r:hal_gnss_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-qti                     u:object_r:vendor_hal_gnss_qti_exec:s0
 
 # Perf
 /system/bin/perfservice                                                                     u:object_r:perfservice_exec:s0
