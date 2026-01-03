@@ -67,6 +67,9 @@
 /(mnt/vendor)/persist/vpp(/.*)?                                                             u:object_r:persist_vpp_file:s0
 /(mnt/vendor)/persist/secnvm(/.*)?                                                          u:object_r:persist_secnvm_file:s0
 
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.aw2013-s2    u:object_r:hal_light_default_exec:s0
+
 # Power hidl stats
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock           u:object_r:hal_power_stats_default_exec:s0
 
