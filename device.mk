@@ -289,11 +289,7 @@ PRODUCT_PACKAGES += charger_res_images
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
