@@ -15,3 +15,5 @@ get_prop(system_server, build_bootimage_prop);
 
 allow system_server sysfs:file r_file_perms;
 allow system_server init:binder { call transfer };
+
+allow system_server vendor_file:file { open getattr read };
