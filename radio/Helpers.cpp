@@ -71,7 +71,18 @@ hidl_vec<V1_4::CellInfo> Create1_4CellInfoList(const hidl_vec<V1_0::CellInfo>& c
         if(cellInfo[x].gsm.size() == 1){
             V1_2::CellInfoGsm GsmInfo = {};
             GsmInfo.cellIdentityGsm.base = cellInfo[x].gsm[0].cellIdentityGsm;
+            GsmInfo.cellIdentityGsm.base.arfcn = INT_MAX;
+            GsmInfo.cellIdentityGsm.base.bsic = 0xFF;
+
+            std::string mnc = GsmInfo.cellIdentityGsm.base.mnc;
+            if (mnc.length() == 1) {
+                GsmInfo.cellIdentityGsm.base.mnc = "0" + mnc;
+            }
+
             GsmInfo.signalStrengthGsm = cellInfo[x].gsm[0].signalStrengthGsm;
+            GsmInfo.signalStrengthGsm.signalStrength = cellInfo[x].gsm[0].cellIdentityGsm.arfcn;
+            GsmInfo.signalStrengthGsm.bitErrorRate = cellInfo[x].gsm[0].cellIdentityGsm.bsic;
+
             newCI[x].info.gsm(GsmInfo);
         }
         else if(cellInfo[x].cdma.size() == 1){
@@ -84,17 +95,41 @@ hidl_vec<V1_4::CellInfo> Create1_4CellInfoList(const hidl_vec<V1_0::CellInfo>& c
         else if(cellInfo[x].lte.size() == 1){
             V1_4::CellInfoLte LteInfo = {};
             LteInfo.base.cellIdentityLte.base = cellInfo[x].lte[0].cellIdentityLte;
+            LteInfo.base.cellIdentityLte.base.earfcn = INT_MAX;
             LteInfo.base.cellIdentityLte.bandwidth = INT_MAX;
             LteInfo.cellConfig.isEndcAvailable = false;
-            LteInfo.base.signalStrengthLte = cellInfo[x].lte[0].signalStrengthLte;
+
+            std::string mnc = LteInfo.base.cellIdentityLte.base.mnc;
+            if (mnc.length() == 1) {
+                LteInfo.base.cellIdentityLte.base.mnc = "0" + mnc;
+            }
+
+            LteInfo.base.signalStrengthLte.signalStrength = cellInfo[x].lte[0].cellIdentityLte.earfcn;
+
+            LteInfo.base.signalStrengthLte.rsrp = cellInfo[x].lte[0].signalStrengthLte.signalStrength;
+            LteInfo.base.signalStrengthLte.rsrq = cellInfo[x].lte[0].signalStrengthLte.rsrp;
+            LteInfo.base.signalStrengthLte.rssnr = INT_MAX;
+            LteInfo.base.signalStrengthLte.cqi = INT_MAX;
+            LteInfo.base.signalStrengthLte.timingAdvance = INT_MAX;
+
             newCI[x].info.lte(LteInfo);
         }
         else if(cellInfo[x].wcdma.size() == 1){
             V1_2::CellInfoWcdma WcdmaInfo = {};
             WcdmaInfo.cellIdentityWcdma.base = cellInfo[x].wcdma[0].cellIdentityWcdma;
-            WcdmaInfo.signalStrengthWcdma.base = cellInfo[x].wcdma[0].signalStrengthWcdma;
-            WcdmaInfo.signalStrengthWcdma.rscp = INT_MAX;
+            WcdmaInfo.cellIdentityWcdma.base.uarfcn = INT_MAX;
+
+            std::string mnc = WcdmaInfo.cellIdentityWcdma.base.mnc;
+            if (mnc.length() == 1) {
+                WcdmaInfo.cellIdentityWcdma.base.mnc = "0" + mnc;
+            }
+
+            WcdmaInfo.signalStrengthWcdma.base.signalStrength = cellInfo[x].wcdma[0].cellIdentityWcdma.uarfcn;
+            WcdmaInfo.signalStrengthWcdma.base.bitErrorRate = cellInfo[x].wcdma[0].signalStrengthWcdma.signalStrength;
+
+            WcdmaInfo.signalStrengthWcdma.rscp = 2 * WcdmaInfo.signalStrengthWcdma.base.signalStrength + 7;
             WcdmaInfo.signalStrengthWcdma.ecno = INT_MAX;
+
             newCI[x].info.wcdma(WcdmaInfo);
         }
         else if(cellInfo[x].tdscdma.size() == 1){
