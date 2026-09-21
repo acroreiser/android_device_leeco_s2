@@ -643,9 +643,14 @@ Return<void> Radio::startNetworkScan(int32_t serial, const V1_1::NetworkScanRequ
 }
 
 Return<void> Radio::stopNetworkScan(int32_t serial) {
-    MAYBE_WRAP_V1_1_CALL(stopNetworkScan, serial);
+    V1_0::RadioResponseInfo info = {};
+    info.serial = serial;
+    info.type = V1_0::RadioResponseType::SOLICITED;
+    info.error = V1_0::RadioError::NONE;
 
-    // TODO implement
+    // Actually no-op for <=1.0. Just to make telephony happy...
+    mRadioResponse->mRealRadioResponse->stopNetworkScanResponse(info);
+
     return Void();
 }
 
