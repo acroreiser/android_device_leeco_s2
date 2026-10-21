@@ -399,6 +399,8 @@ PRODUCT_PACKAGES += \
     init.s2.usb.rc \
     ueventd.qcom.rc
 
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_s2)
+
 # Releasetools
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/devinfo.sh:install/bin/devinfo.sh
