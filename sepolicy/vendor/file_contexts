@@ -45,7 +45,7 @@
 # Perf
 /system/bin/perfservice                                                                     u:object_r:perfservice_exec:s0
 /sys/devices/soc\.0/[a-z0-9]+\.qcom,msmcci-ccimon(/.*)?                                     u:object_r:sysfs_devfreq:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.0-service                     u:object_r:hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.0-service                     u:object_r:vendor_hal_perf_default_exec:s0
 
 # Persist
 /(mnt/vendor)/persist/bluetooth(/.*)?                                                       u:object_r:persist_bluetooth_file:s0
