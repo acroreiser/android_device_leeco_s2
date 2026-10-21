@@ -1,0 +1,97 @@
+cc_library_shared {
+    name: "camera.msm8952",
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "32",
+
+    srcs: [
+        "util/QCameraCmdThread.cpp",
+        "util/QCameraQueue.cpp",
+        "util/QCameraBufferMaps.cpp",
+        "QCamera2Hal.cpp",
+        "QCamera2Factory.cpp",
+        "HAL3/QCamera3HWI.cpp",
+        "HAL3/QCamera3Mem.cpp",
+        "HAL3/QCamera3Stream.cpp",
+        "HAL3/QCamera3Channel.cpp",
+        "HAL3/QCamera3VendorTags.cpp",
+        "HAL3/QCamera3PostProc.cpp",
+        "HAL3/QCamera3CropRegionMapper.cpp",
+        "HAL/QCamera2HWI.cpp",
+        "HAL/QCameraMuxer.cpp",
+        "HAL/QCameraMem.cpp",
+        "HAL/QCameraStateMachine.cpp",
+        "HAL/QCameraChannel.cpp",
+        "HAL/QCameraStream.cpp",
+        "HAL/QCameraPostProc.cpp",
+        "HAL/QCamera2HWICallbacks.cpp",
+        "HAL/QCameraParameters.cpp",
+        "HAL/QCameraThermalAdapter.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DVENUS_PRESENT",
+        "-DDEFAULT_DENOISE_MODE_ON",
+        "-DHAL3",
+        "-DUSE_MEDIA_EXTENSIONS",
+        "-Wno-unused-parameter",
+        "-Wno-unreachable-code-loop-increment",
+    ],
+
+    local_include_dirs: [
+        "stack/common",
+        "util",
+        "HAL",
+    ],
+
+    include_dirs: [
+        "frameworks/native/include/media/hardware",
+        "frameworks/native/include/media/openmax",
+        "frameworks/native/libs/nativewindow/include",
+        "frameworks/native/libs/arect/include",
+        "frameworks/native/libs/nativebase/include",
+        "hardware/qcom-caf/msm8952/media/libstagefrighthw",
+        "hardware/qcom-caf/msm8952/media/mm-core/inc",
+        "hardware/qcom-caf/msm8952/display/libqservice",
+        "system/media/camera/include",
+    ],
+
+    header_libs: [
+        "display_headers",
+        "generated_kernel_headers",
+        "camera_common_headers",
+        "media_plugin_headers",
+        "libbinder_headers",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libhardware",
+        "libbinder",
+        "libutils",
+        "libcutils",
+        "libdl",
+        "libmmcamera_interface",
+        "libmmjpeg_interface",
+        "libui",
+        "libcamera_metadata",
+        "libqdMetaData",
+        "libqomx_core",
+        "libqservice",
+    ],
+
+    static_libs: [
+        "android.hardware.camera.common-helper",
+    ],
+}
+
+cc_library_headers {
+    name: "camera_common_headers",
+    vendor: true,
+    export_include_dirs: [
+        "stack/common",
+    ],
+}

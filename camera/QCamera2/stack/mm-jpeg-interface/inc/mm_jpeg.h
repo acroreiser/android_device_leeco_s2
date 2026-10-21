@@ -62,6 +62,8 @@ typedef enum {
 } mm_jpeg_abort_state_t;
 
 
+#define MM_JPEG_CONCURRENT_SESSIONS_COUNT 1
+
 /* define max num of supported concurrent jpeg jobs by OMX engine.
  * Current, only one per time */
 #define NUM_MAX_JPEG_CNCURRENT_JOBS 2
