@@ -1,4 +1,4 @@
-binder_call(hal_fingerprint_default, servicemanager);
+binder_call(hal_fingerprint_default, vndservicemanager);
 binder_call(hal_fingerprint_default, keystore);
 binder_call(hal_fingerprint_default, goodix);
 
@@ -14,3 +14,8 @@ add_service(hal_fingerprint_default, fingerprintd_custom_service);
 
 allow hal_fingerprint_default goodix_exec:file r_file_perms;
 allow hal_fingerprint_default hal_fingerprint_default:capability { dac_read_search dac_override };
+
+allow hal_fingerprint_default vndbinder_device:chr_file { open read write ioctl };
+allow hal_fingerprint_default default_android_vndservice:service_manager { find };
+
+get_prop(hal_fingerprint_default, default_prop);

@@ -16,3 +16,8 @@ binder_call(goodix, hal_fingerprint_default);
 add_service(goodix, goodix_service);
 
 allow goodix goodix:capability { dac_override };
+
+allow goodix vndbinder_device:chr_file { open read write ioctl };
+allow goodix vndservicemanager:binder { call transfer };
+allow goodix default_android_vndservice:service_manager { find add };
+get_prop(goodix, default_prop);
