@@ -538,3 +538,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Model is set via init library
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model
+
+# Mount point for modem firmware partition
+PRODUCT_PACKAGES += \
+    vendor_firmware_mnt_mountpoint \
+    vendor_dsp_mountpoint
