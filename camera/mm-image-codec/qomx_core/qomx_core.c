@@ -355,7 +355,7 @@ OMX_API OMX_ERRORTYPE OMX_APIENTRY OMX_FreeHandle(
   p_core_comp = &g_omxcore->component[comp_idx];
   p_core_comp->handle[inst_idx] = NULL;
   if (!is_comp_active(p_core_comp)) {
-    rc = dlclose(p_core_comp->lib_handle);
+  //  rc = dlclose(p_core_comp->lib_handle);
     p_core_comp->lib_handle = NULL;
     p_core_comp->get_instance = NULL;
     p_core_comp->create_comp_func = NULL;
