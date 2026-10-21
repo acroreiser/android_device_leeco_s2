@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.0 \
-    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
     audio.bluetooth.default
 
 # Camera
@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
 
 # Fake logprint for fingerprint libs
 PRODUCT_PACKAGES += \
-    fakelogprint
+    fakelogprint \
+    libbinder_shim.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -206,10 +207,23 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
     android.hidl.memory@1.0.vendor \
     android.hidl.manager@1.0 \
     libhidltransport \
-    libhwbinder
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor \
+    libbinder.vendor \
+    libnetutils.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.system.net.netd@1.0.vendor \
+    libcutils-v29 \
+    libcutils-v29.vendor \
+    libprotobuf-cpp-full-v29 \
+    libprotobuf-cpp-lite-v29 \
+    libstdc++_vendor \
+    libgui_vendor
 
 # Input configuration
 PRODUCT_COPY_FILES += \
@@ -361,7 +375,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock \
-    vendor.qti.hardware.perf@2.0
+    vendor.qti.hardware.perf@2.0.vendor
 
 # libutils.so for pm-service
 PRODUCT_PACKAGES += \
@@ -429,7 +443,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libpower.vendor
 
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
