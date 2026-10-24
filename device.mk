@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-v29 \
     libprotobuf-cpp-lite-v29 \
     libstdc++_vendor \
-    libgui_vendor
+    libgui_vendor \
+    libsqlite.vendor
 
 # Input configuration
 PRODUCT_COPY_FILES += \
